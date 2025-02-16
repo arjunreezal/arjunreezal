@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone1,Interact District 3292</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+b  
+        h2 {
+            text-align: center;
+        }
+
+        /* Home Section */
+        #home {
+            background: url('zonal.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            background: #f0f8ff;
+            padding: 20px;
+        }
+
+        .project {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .project h3 {
+            margin: 10px 0;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        /* Teams Section */
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: #fff0f5;
+            padding: 20px;
+        }
+
+        .team-member {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px 0;
+        }
+
+        .team-member h3 {
+            margin: 10px 0;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #eef;
+            padding: 40px 20px;
+        }
+
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function openProject(title, description) {
+            const projectWindow = window.open('', '_blank', 'width=600,height=400');
+            projectWindow.document.write(`
+                <html>
+                <head>
+                    <title>${title}</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            padding: 20px;
+                        }
+                        h1 {
+                            color: #333;
+                        }
+                        p {
+                            color: #555;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>${title}</h1>
+                    <p>${description}</p>
+                </body>
+                </html>
+            `);
+        }
+
+        document.getElementById('contact-form')?.addEventListener('submit', function(event){
+            event.preventDefault(); // Prevent the default form submission
+            alert('Your message has been sent!'); // Placeholder for actual submission logic
+            this.reset(); // Reset form after submission
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#zprojects">Zonal Event</a></li>
+            <li><a href="#rojects">PS Meet</a></li>
+            <li><a href="#ts">ZIR Visit</a></li>
+            <li><a href="#clubs">Our Clubs</a></li>
+            <li><a href="#projects">Clubs Projects</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home"></section>
+    
+
+    <!-- Projects Section -->
+ <section id="projects">
+    <h2>Zonal Event</h2>
+    <div class="projects-container">
+        <div class="projects-container">
+            <div class="project" onclick="openProject('First Zonal IT Seminar', 'Interact Club of Devbhumi organized an grandest event of Rotary year 2024-25 by the title of सांस्कृतिक यात्रा: Celebrating cultural journey on 30th November,2024.')">
+                <img src="sanskritikoyatra_20241219_162106_0000.png" alt="project1">
+                <h3>First IT Seminar</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Two', 'Environmental conservation and community clean-up campaigns.')">
+                <img src="candel (2).jpg" alt="Project 2">
+                <h3>Zonal Leadership Traning Seminar</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Three', 'Providing healthcare access to underprivileged communities.')">
+                <img src="candel (1).jpg" alt="Project 3">
+                <h3>Candle Light Evening</h3>
+            </div>
+            
+            
+    <!-- rojects Section -->
+ <section id="rojects">
+    <h2>President Secretary (PS) Meet</h2>
+    <div class="projects-container">
+        <div class="projects-container">
+            <div class="project" onclick="openProject('First Zonal IT Seminar', 'Interact Club of Devbhumi organized an grandest event of Rotary year 2024-25 by the title of सांस्कृतिक यात्रा: Celebrating cultural journey on 30th November,2024.')">
+                <img src="a.jpg" alt="project1">
+                <h3>1st PS Meet</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Two', 'Environmental conservation and community clean-up campaigns.')">
+                <img src="b.jpg" alt="Project 2">
+                <h3>2nd PS Meet Coming Soon</h3>
+            </div>
+            <div 
+
+            <!-- ts Section -->
+            <section id="ts">
+               <h2>ZIR Visit Coming Soon</h2>
+               <div class="projects-container">
+                   <div class="projects-container">
+                       <div class="project" onclick="openProject('First Zonal IT Seminar', 'Interact Club of Devbhumi organized an grandest event of Rotary year 2024-25 by the title of सांस्कृतिक यात्रा: Celebrating cultural journey on 30th November,2024.')">
+                           <img src="zir (2).png" alt="project1">
+                           <h3>ZIR Visit Coming Soon</h3>
+                       </div>
+                       
+                       <div 
+            
+          
+        
+    <!-- Clubs Section -->
+    <section id="clubs">
+        <h2>Our Clubs</h2>
+        <div class="projects-container">
+            <div class="project" onclick="openProject('Interact Club of Arniko College', 'Interact Club of Arniko College is one of the actives club under zone1,interact district 3292. The clubs is Located at Biratnagar,Morang and was charter on Rotary Year2023-24.')">
+                <img src="arniko.jpg" alt="project1">
+                <h3> Interact Club of Arniko College</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Two', 'Environmental conservation and community clean-up campaigns.')">
+                <img src="bishnu.jpg" alt="Project 2">
+                <h3>Interact Club of Bishnu Memorial</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Three', 'Providing healthcare access to underprivileged communities.')">
+                <img src="fusion.jfif" alt="Project 3">
+                <h3>Interact Club of Biratnagar Fusion</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Four', 'Supporting small businesses through financial aid and training.')">
+                <img src="devbhumi.jfif" alt="Project 4">
+                <h3>Interact Club of Devbhumi</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Five', 'Advocating for gender equality and women’s empowerment.')">
+                <img src="dav.jpg" alt="Project 5">
+                <h3>Interact Club of DAV School</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Six', 'Promoting mental health awareness and support initiatives.')">
+                <img src="dps.jfif" alt="Project 6">
+                <h3>Interact Club of Delhi Public School-Biratnagar</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Seven', 'Organizing skill development workshops for the unemployed.')">
+                <img src="dps.jfif" alt="Project 7">
+                <h3>Interact Club of Delhi Public School- Dharan</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Eight', 'Providing clean drinking water in remote areas.')">
+                <img src="depot.jfif" alt="Project 8">
+                <h3>Interact Club of Depot</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Nine', 'Creating safe spaces for children to learn and play.')">
+                <img src="JMES.jfif" alt="Project 9">
+                <h3>Interact Club of Jhapa Model Higher Secondary English School</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="pragyan.jpg" alt="Project 10">
+                <h3>Interact Club of Pragyan Academy Pvt.Ltd</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="PEACEZONE.jfif" alt="Project 10">
+                <h3>Interact Club of PeaceZone School</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="sos.jfif" alt="Project 10">
+                <h3>Interact Club of SOS Itahari</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="sidd.jfif" alt="Project 10">
+                <h3>Interact Club of Siddhartha Foothills </h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="shardha.jfif" alt="Project 10">
+                <h3>Interact Club of Shardha Balika</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="vs.jfif" alt="Project 10">
+                <h3>Interact Club of Vishwa Aadarsha</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Clubs Projects</h2>
+        <div class="projects-container">
+            <div class="project" onclick="openProject('सांस्कृतिक यात्रा', 'Interact Club of Devbhumi organized an grandest event of Rotary year 2024-25 by the title of सांस्कृतिक यात्रा: Celebrating cultural journey on 30th November,2024.')">
+                <img src="sanskritikoyatra_20241219_162106_0000.png" alt="project1">
+                <h3>सांस्कृतिक यात्रा - IC DEVBHUMI</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Two', 'Environmental conservation and community clean-up campaigns.')">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Three', 'Providing healthcare access to underprivileged communities.')">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project Three</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Four', 'Supporting small businesses through financial aid and training.')">
+                <img src="project4.jpg" alt="Project 4">
+                <h3>Project Four</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Five', 'Advocating for gender equality and women’s empowerment.')">
+                <img src="project5.jpg" alt="Project 5">
+                <h3>Project Five</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Six', 'Promoting mental health awareness and support initiatives.')">
+                <h3>Project Six</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Seven', 'Organizing skill development workshops for the unemployed.')">
+                <img src="project7.jpg" alt="Project 7">
+                <h3>Project Seven</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Eight', 'Providing clean drinking water in remote areas.')">
+                <img src="project8.jpg" alt="Project 8">
+                <h3>Project Eight</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Nine', 'Creating safe spaces for children to learn and play.')">
+                <img src="project9.jpg" alt="Project 9">
+                <h3>Project Nine</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Ten', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 10">
+                <h3>Project Ten</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Eleven', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 11">
+                <h3>Project Ten</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Twelve', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 10">
+                <h3>Project Ten</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Thirteen', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 10">
+                <h3>Project Ten</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Fourthteen', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 10">
+                <h3>Project Ten</h3>
+            </div>
+            <div class="project" onclick="openProject('Project Fiveteen', 'Hosting community events to promote cultural heritage.')">
+                <img src="project10.jpg" alt="Project 10">
+                <h3>Project Ten</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section id="teams">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="project">
+                <img src="prajuna.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Prajuna Niraula</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal Interact Representative</h4>
+                <h4>Interact Club of Sharadha Balika </h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="binita.png" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Binita Acharya</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Assistant ZIR</h4>
+                <h4>Interact Club of Devbhumi</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/binitaacharya1?igsh=NTh6eHdnNGRxZ3l1&utm_source=qr" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/binita.acharya.123276?mibextid=wwXIfr&rdid=TsPoM6tDFQLuIYMH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15Mtjp7VFp%2F%3Fmibextid%3DwwXIfr#" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="saanvi.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Saanvi Agrawal</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal Secretary</h4>
+                <h4>Interact Club of Bishnu Memorial</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="iam.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Arjun Rijal</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal IT Head</h4>
+                <h4>Interact Club of Devbhumi</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="charvi.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Charvii Agrawal</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal IT Assistant</h4>
+                <h4>Interact Club of Biratnagar Fusion</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://scontent.fbdp2-1.fna.fbcdn.net/v/t39.30808-6/450318144_995587412103248_6253149945053366733_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=4hS-Je5Wwi8Q7kNvgFU6P9I&_nc_oc=AdgHxJ-6Kwb15MHsI3G_v9ejVmfXdmXnQp5hfH_0UqTwSYwXTkFqHcMM_oAIXPk4DAeVKMi2RFcU3OHp92d1lk8h&_nc_zt=23&_nc_ht=scontent.fbdp2-1.fna&_nc_gid=ALaLyxl4r3LB0AdjIpUoPwD&oh=00_AYDPmyzsmNFYq3KrEWnaBhc-9y5Ufq8VdNNiP3I5-KAP-g&oe=6769F8F4" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Prabhat Bhattarai</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal Executive</h4>
+                <h4>Interact Club of Pragyan Academy</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="aarav.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Aarav Aagrawal</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal Executive</h4>
+                <h4>Interact Club of Delhi Public School - Dharan</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="pranish.jpg" alt="Arjun Rijal's profile picture">
+                <h3>Itr. Pranish Acharya</h3>
+                <h4 style="margin-top: 2px; margin-bottom: 20px;">Zonal Executive</h4>
+                <h4>Interact Club Jhapa Model Higher Secondary English School</h4>
+                <div class="social-links">
+                    <a href="mailto:arjunreezal@gmail.com" target="_blank" title="Email">
+                        <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" 
+                             alt="Email" 
+                             style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                    <a href="https://www.instagram.com/arjunreezal04/" target="_blank" title="Instagram">
+                        <img src="https://i.pinimg.com/736x/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg" 
+                             alt="Instagram" 
+                             style="width: 33px; height: 33px; vertical-align: middle; filter: grayscale(100%); margin-right: 10px;">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100066097221252&mibextid=ZbWKwL" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.freepik.com/256/2175/2175193.png?semt=ais_hybrid" 
+                             alt="Facebook" 
+                             style="width: 29px; height: 29px; vertical-align: middle; filter: grayscale(100%);">
+                    </a>
+                </div>
+            </div>
+
+            
+            
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-bottom">
+          <p>&copy; Interact Club of Devbhumi .</p>
+        </div>
+      </footer>
+    </footer>
+</body>
+</html>
